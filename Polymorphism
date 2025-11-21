@@ -1,1 +1,65 @@
+// Parent class
+class Vehicle {
 
+    // Overloaded methods (Compile-Time Polymorphism)
+    void info() {
+        System.out.println("This is a vehicle");
+    }
+
+    void info(String brand) {
+        System.out.println("Brand: " + brand);
+    }
+
+    void info(String brand, int year) {
+        System.out.println("Brand: " + brand + ", Year: " + year);
+    }
+
+    // Method to be overridden
+    void speed() {
+        System.out.println("Vehicle has an average speed.");
+    }
+}
+
+// Subclass 1 - Changed to Honda Civic
+class Car extends Vehicle {
+    @Override
+    void speed() {
+        System.out.println("Honda Civic runs at 180 km/h.");
+    }
+    
+    @Override
+    void info() {
+        System.out.println("This is a Honda Civic");
+    }
+}
+
+// Subclass 2
+class Motorcycle extends Vehicle {
+    @Override
+    void speed() {
+        System.out.println("Motorcycle runs at 249 km/h.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Vehicle v;
+
+        // Using Honda Civic object
+        v = new Car();
+        v.info();
+        v.info("Honda");
+        v.info("Honda", 2022);
+        v.speed();
+
+        System.out.println();
+
+        // Using Motorcycle object
+        v = new Motorcycle();
+        v.info();
+        v.info("Ford");
+        v.info("Ford", 2024);
+        v.speed();
+    }
+}
