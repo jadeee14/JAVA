@@ -1,1 +1,40 @@
+// Abstract class
+abstract class Car {
+    String brand = "Honda";
 
+    abstract void startEngine();
+    abstract void stopEngine();
+
+    void showBrand() {
+        System.out.println("Car Brand: " + brand);
+    }
+}
+
+class HondaCivic extends Car {
+
+    void startEngine() {
+        System.out.println("Honda Civic 2022 engine started with smart key.");
+    }
+
+    void stopEngine() {
+        System.out.println("Honda Civic 2022 engine stopped with auto idle stop.");
+    }
+
+    void showModel() {
+        System.out.println("Model: Honda Civic 2022");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Car myCar = new HondaCivic();
+
+        myCar.showBrand();
+        myCar.startEngine();
+        myCar.stopEngine();
+
+        // Access subclass method
+        ((HondaCivic) myCar).showModel();
+    }
+}
