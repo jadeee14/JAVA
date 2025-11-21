@@ -1,6 +1,0 @@
-public class HelloJava {
-    public static void main(String[] args) {
-        System.out.println("My name is Jaderie.");
-        System.out.println("My favorite quote is: \"If you can dream it, you can do it.\"");
-    }
-}
