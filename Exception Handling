@@ -1,1 +1,12 @@
+public class Main {
+    public static void main(String[] args) {
+        try {
+            int result = 10 / 0;   // This operation triggers an exception
+            System.out.println(result);
+        } catch (ArithmeticException ex) {
+            System.out.println("Error: Division by zero is not allowed!");
+        }
 
+        System.out.println("The program is still running...");
+    }
+}
