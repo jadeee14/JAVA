@@ -29,11 +29,11 @@ public class Main {
     public static void main(String[] args) {
         
         Car myCar = new Car();
-        myCar.brand = "Toyota";    
-        myCar.color = "Red";      
-        myCar.model = "Corolla";  
+        myCar.brand = "Honda";    
+        myCar.color = "White";      
+        myCar.model = "Civic";  
         myCar.year = 2022;        
-        myCar.price = 20000.00;   
+        myCar.price = 200000.00;   
         
         myCar.displayCarInfo();
     }
